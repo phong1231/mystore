@@ -1,0 +1,25 @@
+.product-detail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px; /* Đẩy lên 200px */
+    
+}
+
+.card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+}
+.col-6 h1,
+.col-6 h3,
+.col-6 h5,
+.col-6 a,
+.col-6 button {
+    margin-bottom: 20px; /* Đặt khoảng cách giữa các dòng chữ là 10px */
+}
+.star-rating .fa-star, .star-rating .fa-star-half {
+    color: gold; /* Đổi màu thành vàng */
+  }
+  

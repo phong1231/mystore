@@ -1,0 +1,22 @@
+.btnCart{
+    text-align: center;
+}
+.btnCart button {
+    transition: transform 0.2s ease; /* Tạo hiệu ứng mượt mà */
+}
+
+.btnCart button:hover {
+    transform: scale(1.1); /* Phóng to 110% khi hover */
+}
+
+ 
+.card-body .card-title{
+    text-align: center;
+    font-size: 20px;
+ 
+
+}
+.hd{
+     text-align: center;
+     font-weight: bold;
+}

@@ -1,0 +1,74 @@
+<!-- addproduct.component.html -->
+<!-- addproduct.component.html -->
+<div class="container  custom-container">
+  <div class="card w-50  " style="margin-top: 200px;">
+    <h2 class="hd card-header bg-info">Thêm sản phẩm</h2>
+    <form enctype="multipart/form-data" >
+      <div class="mb-3">
+        <label for="image">Hình ảnh</label>
+        <input type="file" class="form-control" id="image" name="image" (change)="onFileSelected($event)">
+        <img *ngIf="newProductForm.get('image')?.value" [src]="newProductForm.get('image')?.value" alt="Product Image" class="mt-2" style="max-width: 200px;">
+      </div>
+      
+      
+      <div class="mb-3">
+        <label for="productName" class="form-label"> Tên Sản phẩm</label>
+        <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="editedProduct.productName">
+      </div>
+      <div class="mb-3">
+        <label for="productCode" class="form-label">Mã sản phẩm</label>
+        <input type="text" class="form-control" id="productCode" name="productCode" [(ngModel)]="editedProduct.productCode">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Mô tả</label>
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="editedProduct.description">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Giá</label>
+        <input type=" text" class="form-control" id="price" name="price" [(ngModel)]="editedProduct.price">
+      </div>
+      
+      <div *ngIf="editedProduct.id" class="text-center">
+        <button type="button" class="btn btn-primary me-2" (click)="updateProduct()">Lưu</button>
+        <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Hủy bỏ</button>
+      </div>
+      <div *ngIf="!editedProduct.id" class="text-center">
+        <button type="button" class="btn btn-primary" (click)="addProduct()">Thêm sản phẩm</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container-fluid py-5 mt-5">
+  <div class="container py-5">
+    <h1 class="hd">Danh sách sản phẩm</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="bg-dark text-light">
+          <tr>
+            <th scope="col">Hình</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Mã sản phẩm</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Thao Tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td><img class="product-image" [src]="product.imageUrl" alt="Product Image"></td>
+            <td class="bold-text">{{ product.productName }}</td>
+            <td class="bold-text">{{ product.productCode }}</td>
+            <td class="bold-text">{{ product.description }}</td>
+            <td class="bold-text">{{ product.price }}</td>
+            <td class="d-flex align-items-center addsp">
+              <button class="btn btn-primary me-2" (click)="editProduct(product)">Sửa</button>
+              <button class="btn btn-danger" (click)="deleteProduct(product.id)">Xóa</button>
+              
+            </td>
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>
+  </div>
+</div>

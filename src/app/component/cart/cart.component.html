@@ -1,0 +1,85 @@
+<div class="container-fluid py-5 mt-5">
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">SẢN PHẨM</th>
+                    <th scope="col">TÊN</th>
+                    <th scope="col">GIÁ</th>
+                    <th scope="col">SỐ LƯỢNG</th>
+                    <th scope="col">TỔNG</th>
+                    <th scope="col">THAO TÁC</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                    <tr *ngFor="let item of cartItems">
+                        <!--img-->
+                        <th scope="row">
+                            <div class="d-flex align-items-center">
+                                <img [src]="item.imageUrl" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" [alt]="item.productName">
+                            </div>
+                        </th>
+                        <!--name-->
+                        <td>
+                            <p class="mb-0 mt-4">{{ item.productName }}</p>
+                        </td>
+                        <!--Price-->
+                        <td>
+                            <p class="mb-0 mt-4">{{ item.price | currency }}</p>
+                        </td>
+                        <!--Quantity-->
+                        <td>
+                            <div class="input-group quantity mt-4" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border" (click)="decreaseQuantity(item)">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm text-center border-0" [value]="item.quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border" (click)="increaseQuantity(item)">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <!--Total-->
+                        <td>
+                            <p class="mb-0 mt-4">{{ (item.price * item.quantity) | currency }}</p>
+                        </td>
+                        <!--Delete-->
+                        <td>
+                            <button class="btn btn-md rounded-circle bg-light border mt-4" (click)="removeItem(item)">
+                                <i class="fa fa-times text-danger"> </i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       <!--Thanh toán-->
+        <div class="row g-4 justify-content-end">
+            <div class="col-8"></div>
+            <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
+                <div class="bg-light rounded">
+                    <div class="p-4">
+                        <h1 class="display-6 mb-4">THANH TOÁN </h1>
+                        <p class="mb-0 text-end"> </p>
+                    </div>
+                    <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
+                        <h5 class="mb-0 ps-4 me-4">TỔNG</h5>
+                        <p class="mb-0 pe-4">{{ totalPrice | currency }}</p>
+                    </div>
+                    <div class="footer-item text-center">
+                        
+                        <p>Thanh toán được chấp nhận</p>
+                        <img src="assets/img/payment.png" class="img-fluid" alt="">
+                    </div>
+                    <div class=" text-center">
+                    <button class="btn border-secondary rounded-pill px-4 py-3   mt-3 text-primary text-uppercase mb-4 ms-4" (click)="checkout()">Thanh Toán</button>
+                </div></div>
+            </div>
+        </div>
+    </div>
+</div>

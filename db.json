@@ -1,0 +1,82 @@
+{
+  "product": [
+    {
+      "productId": 1,
+      "productName": "Ngũ Cốc",
+      "productCode": "1",
+      "description": "Sản phẩm có vitaminA ",
+      "price": "33.36",
+      "starRating": 3.2,
+      "imageUrl": "./assets/img/20.jpg",
+      "id": "d1"
+    },
+    {
+      "productId": 3,
+      "productName": "Đậu lạc sấy",
+      "productCode": "3",
+      "description": "Bổ sung chất xám cho cơ thể",
+      "price": 19.95,
+      "starRating": 3.2,
+      "imageUrl": "./assets/img/22.jpg",
+      "id": "d3"
+    },
+    {
+      "productId": 4,
+      "productName": "Dừa bột",
+      "productCode": "4",
+      "description": "Tăng chất sơ cho cơ thể",
+      "price": 11.55,
+      "starRating": 3.7,
+      "imageUrl": "assets/img/23.jpg",
+      "id": "c314"
+    },
+    {
+      "productId": 5,
+      "productName": "Bột Trà Xanh",
+      "productCode": "5",
+      "description": "Tăng cường vitamin chất xơ",
+      "price": 32.99,
+      "starRating": 4.2,
+      "imageUrl": "assets/img/24.jpg",
+      "id": "9a9e"
+    },
+    {
+      "productId": 6,
+      "productName": "Điều sấy",
+      "productCode": "6",
+      "description": "Ăn cả nhà thêm vui  ",
+      "price": 8.9,
+      "starRating": 4.8,
+      "imageUrl": "assets/img/25.jpg",
+      "id": "37c4"
+    },
+    {
+      "productId": 8,
+      "productName": "Trà Xanh",
+      "productCode": "8",
+      "description": "Làm đẹp da",
+      "price": "13.45",
+      "starRating": 4.6,
+      "imageUrl": "assets/img/27.jpg",
+      "id": "ab68"
+    },
+    {
+      "productId": 8,
+      "productName": "Trà Thảo Mộc",
+      "productCode": "8",
+      "description": "Chống lão hóa",
+      "price": "13.45",
+      "starRating": 4.6,
+      "imageUrl": "assets/img/20.jpg",
+      "id": "ab69"
+    }
+  ],
+  "user": [
+    {
+      "id": "45b4",
+      "email": "haquocphong0406@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
+    }
+  ]
+}

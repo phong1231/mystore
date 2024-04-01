@@ -1,0 +1,25 @@
+/* addproduct.component.css */
+.product-image {
+    max-width: 100px; 
+    max-height: 100px; 
+  }
+   
+  .bold-text {
+    font-weight: bold;
+  }
+  .hd{
+    text-align: center;
+  }
+  .custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% chiều cao của màn hình */
+  }
+  
+  .card {
+    width: 50%; /* Độ rộng của card */
+    box-shadow: 3px 6px 20px rgba(255, 115, 115, 0.1); /* Hiệu ứng đổ bóng */
+  }
+  
+  

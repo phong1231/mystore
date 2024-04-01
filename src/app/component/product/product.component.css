@@ -1,0 +1,13 @@
+.custom-container {
+    margin-top: 200px;
+  }
+.btnCart{
+  text-align: center;
+}
+.btnCart button {
+  transition: transform 0.2s ease; /* Tạo hiệu ứng mượt mà */
+}
+
+.btnCart button:hover {
+  transform: scale(1.1); /* Phóng to 110% khi hover */
+}

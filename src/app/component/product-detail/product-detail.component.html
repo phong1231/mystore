@@ -1,0 +1,23 @@
+<div class="row  product-detail-container" >
+    <div class="card col-4  text-center"  >
+        <img [src]="productDetail?.imageUrl" width="50%" [alt]="productDetail?.productName">
+      </div>
+      
+    <div class="col-6  ">
+      <h1>{{ productDetail?.productName }}</h1>
+      <div class="crop">
+        <div class="star-rating">
+          <ng-container *ngFor="let star of getStarArray(productDetail?.starRating)">
+            <span class="fa fa-star" *ngIf="star === 0"></span>
+            <span class="fa fa-star-half" *ngIf="star === 0.5"></span>
+          </ng-container>
+        </div>
+      </div>
+      
+      <h3>Giá : {{ productDetail?.price | currency }}</h3>
+      <h5>Mô tả: {{ productDetail?.description }}</h5>
+      <a class=" btn btn-secondary" routerLink="/product">Quay Lại</a>     
+        <button class="btn btn-primary " (click)="addToCart(productDetail)">Thêm vào giỏ</button>
+      <br>
+    </div>
+  </div>

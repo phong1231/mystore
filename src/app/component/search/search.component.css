@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 calc(25% - 1rem); /* 25% width with margin */
+    max-width: calc(25% - 1rem);
+    margin: 0.5rem; /* Add some space between columns */
+  }
+  
+  @media (max-width: 992px) {
+    .col-md-6 {
+      flex: 0 0 calc(33.333% - 1rem); /* 33.333% width with margin for medium devices */
+      max-width: calc(33.333% - 1rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-6 {
+      flex: 0 0 calc(50% - 1rem); /* 50% width with margin for small devices */
+      max-width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-6 {
+      flex: 0 0 calc(100% - 1rem); /* 100% width with margin for extra small devices */
+      max-width: calc(100% - 1rem);
+    }
+  }
+ 

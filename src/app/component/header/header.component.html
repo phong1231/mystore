@@ -1,0 +1,48 @@
+<div class="container-fluid fixed-top ">
+    <div class="container topbar bg-primary d-none d-lg-block">
+        <div class="d-flex justify-content-between">
+            <div class="top-info ps-2">
+                <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">262 LŨY BÁN BÍCH TP.HỒ CHÍ MINH</a></small>
+                <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">haquocphong04@gmal.com</a></small>
+            </div>
+            <div class="top-link pe-2">
+                <a *ngIf="!(isLoggedIn$ | async)" routerLink="/login" class="text-white"><small class="text-white mx-2">Đăng nhập</small></a>
+                <a *ngIf="!(isLoggedIn$ | async)" routerLink="/register" class="text-white"><small class="text-white mx-2">Đăng ký</small></a>
+                <a *ngIf="isLoggedIn$ | async" (click)="logout()" routerLink="/login" class="text-white"><small class="text-white mx-2">Đăng Xuất</small></a>
+              </div>
+              
+        </div>
+    </div>
+    <div class="container px-0">
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+            <a routerLink="/home" class="navbar-brand"><h1 class="text-primary display-6">PHONG FOOD</h1></a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a routerLink="/home"  class="nav-item nav-link  ">Trang Chủ</a>
+                    <a routerLink="/product"  class="nav-item nav-link">Cửa hàng</a>
+                    
+                        <a routerLink="/about" class="nav-item nav-link  "  >Giới Thiệu</a>
+                    
+                    <a routerLink="/contact" class="nav-item nav-link">Liên Hệ</a>
+                </div>
+                <div class="d-flex m-3 me-0">
+                    <!-- <input class="form-control" type="text" placeholder="Tìm kiếm sản phẩm">
+                        <i class="fas fa-search text-primary"></i> 
+                         -->
+                    <a routerLink="/cart" class="position-relative me-4 my-auto">
+                        <i class="fa fa-shopping-bag fa-2x"></i>
+                      
+                    </a>
+                    
+                    <a routerLink="/addproduct" class="my-auto">
+                        <i class="fas fa-user fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+ 
